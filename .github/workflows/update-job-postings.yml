@@ -6,12 +6,18 @@ on:
       - 'services/**/*.yaml'
   workflow_dispatch:
 
+# GitHub에 쓰기 권한 부여
+permissions:
+  contents: write
+
 jobs:
   update-postings:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -30,8 +36,13 @@ jobs:
           
       - name: Commit changes
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "자동 채용공고 업데이트 via LLM API" || echo "변경사항 없음"
-          git push 
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }} 
