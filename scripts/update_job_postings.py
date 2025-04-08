@@ -1,12 +1,12 @@
 import os
 import yaml
-import openai
+from openai import OpenAI
 from pathlib import Path
 import frontmatter
 from datetime import datetime
 
 # OpenAI API 설정
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def load_yaml_data(file_path):
     """YAML 파일에서 데이터를 로드합니다."""
@@ -34,7 +34,7 @@ def generate_job_posting(team_data):
 6. 혜택
 """
 
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-4",
         messages=[
             {"role": "system", "content": "당신은 전문적인 채용 담당자입니다. 매력적이고 전문적인 채용 공고를 작성해주세요."},
@@ -46,7 +46,7 @@ def generate_job_posting(team_data):
 
 def save_job_posting(service_name, team_name, content):
     """생성된 채용 공고를 마크다운 파일로 저장합니다."""
-    output_dir = Path("docs") / "job-postings" / service_name
+    output_dir = Path("docs") / "_job-postings" / service_name
     output_dir.mkdir(parents=True, exist_ok=True)
     
     post = {
