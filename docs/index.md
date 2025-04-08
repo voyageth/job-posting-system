@@ -9,7 +9,7 @@ title: 홈
 
     <h2>Facebook</h2>
     <ul class="job-list">
-    {% for post in site.job_postings %}
+    {% for post in site.job-postings %}
         {% if post.service == "facebook" %}
         <li>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -24,7 +24,7 @@ title: 홈
 
     <h2>Google</h2>
     <ul class="job-list">
-    {% for post in site.job_postings %}
+    {% for post in site.job-postings %}
         {% if post.service == "google" %}
         <li>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -39,7 +39,7 @@ title: 홈
 
     <h2>X</h2>
     <ul class="job-list">
-    {% for post in site.job_postings %}
+    {% for post in site.job-postings %}
         {% if post.service == "x" %}
         <li>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>

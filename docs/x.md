@@ -8,7 +8,7 @@ title: X 채용
     <p>X(구 Twitter)의 최신 채용 정보를 확인하세요.</p>
 
     <ul class="job-list">
-    {% for post in site.job_postings %}
+    {% for post in site.job-postings %}
         {% if post.service == "x" %}
         <li>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
