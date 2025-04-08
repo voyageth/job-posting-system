@@ -1,0 +1,34 @@
+team: Frontend Engineering
+tech_stack:
+  - JavaScript/TypeScript
+  - Angular
+  - Web Components
+  - Material Design
+  - Chrome DevTools
+  - Polymer
+  - WebAssembly
+
+requirements:
+  - 현대 웹 프레임워크에 대한 깊은 이해
+  - 크로스 브라우저 호환성 및 웹 표준 준수
+  - 성능 최적화 및 웹 접근성 경험
+  - 반응형 웹 디자인 구현 능력
+
+ideal_candidate:
+  - 대규모 웹 애플리케이션 개발 경험
+  - 프론트엔드 아키텍처 설계 경험
+  - 웹 성능 최적화 전문성
+  - 사용자 중심 인터페이스 설계 능력
+
+projects:
+  - Google Search
+  - Google Maps
+  - Gmail
+  - Google Workspace
+
+culture:
+  - Innovation First
+  - Data-Driven Decision Making
+  - User Focus
+  - Think Big
+  - Do the Right Thing 
