@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 홈
+permalink: /
 ---
 
 <div class="company-section">

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Facebook 채용
+permalink: /facebook/
 ---
 
 <div class="company-section">

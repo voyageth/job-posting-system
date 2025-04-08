@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Google 채용
+permalink: /google/
 ---
 
 <div class="company-section">

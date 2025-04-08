@@ -1,6 +1,7 @@
 ---
 layout: default
 title: X 채용
+permalink: /x/
 ---
 
 <div class="company-section">

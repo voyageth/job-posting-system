@@ -46,7 +46,7 @@ def generate_job_posting(team_data):
 
 def save_job_posting(service_name, team_name, content):
     """생성된 채용 공고를 마크다운 파일로 저장합니다."""
-    output_dir = Path("docs") / "_job-postings" / service_name
+    output_dir = Path("docs") / "collections" / "job-postings" / service_name
     output_dir.mkdir(parents=True, exist_ok=True)
     
     post = {

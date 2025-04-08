@@ -11,10 +11,11 @@ plugins:
   - jekyll-seo-tag
 
 # Collections
+collections_dir: collections
 collections:
   job-postings:
     output: true
-    permalink: /:collection/:path/
+    permalink: /job-postings/:path/
 
 # Defaults
 defaults:
