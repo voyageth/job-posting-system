@@ -30,24 +30,33 @@ body {
     border-bottom: 1px solid $grey-color;
     padding: $spacing-unit 0;
     margin-bottom: $spacing-unit;
+    background-color: #f8f9fa;
 
     .site-title {
         font-size: 26px;
         font-weight: bold;
         text-decoration: none;
         color: $text-color;
+        &:hover {
+            text-decoration: none;
+            color: $brand-color;
+        }
     }
 
     .site-nav {
         float: right;
+        margin-top: 5px;
 
         a {
             color: $text-color;
             text-decoration: none;
             margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 4px;
 
             &:hover {
                 color: $brand-color;
+                background-color: #eef;
             }
         }
     }
@@ -56,6 +65,10 @@ body {
 // Posts
 .post {
     margin-bottom: $spacing-unit * 2;
+    background-color: white;
+    padding: $spacing-unit;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
     .post-header {
         margin-bottom: $spacing-unit;
@@ -64,12 +77,14 @@ body {
     .post-title {
         font-size: 42px;
         letter-spacing: -1px;
-        line-height: 1;
+        line-height: 1.2;
+        color: $brand-color;
     }
 
     .post-meta {
         font-size: $base-font-size;
         color: $grey-color;
+        margin-bottom: $spacing-unit;
     }
 
     .post-content {
@@ -77,14 +92,66 @@ body {
 
         h2 {
             font-size: 32px;
+            margin-top: $spacing-unit;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $grey-color;
         }
 
         h3 {
             font-size: 26px;
+            margin-top: $spacing-unit;
         }
 
         h4 {
             font-size: 20px;
+            margin-top: $spacing-unit / 2;
+        }
+
+        ul {
+            margin-left: $spacing-unit;
+        }
+    }
+}
+
+// Company pages
+.company-section {
+    margin-bottom: $spacing-unit * 2;
+    
+    h2 {
+        color: $brand-color;
+        border-bottom: 2px solid $brand-color;
+        padding-bottom: 10px;
+        margin-bottom: $spacing-unit;
+    }
+
+    .job-list {
+        list-style: none;
+        padding: 0;
+        
+        li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            
+            &:hover {
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+            
+            a {
+                color: $text-color;
+                text-decoration: none;
+                
+                &:hover {
+                    color: $brand-color;
+                }
+            }
+            
+            .post-date {
+                color: $grey-color;
+                font-size: 14px;
+            }
         }
     }
 }
@@ -95,4 +162,10 @@ body {
     padding: $spacing-unit 0;
     margin-top: $spacing-unit * 2;
     color: $grey-color;
+    background-color: #f8f9fa;
+    
+    p {
+        margin: 0;
+        text-align: center;
+    }
 } 
