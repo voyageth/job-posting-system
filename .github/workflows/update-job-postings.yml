@@ -25,7 +25,7 @@ jobs:
 
       - name: Run LLM API update script
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI }}
         run: python scripts/update_job_postings.py
           
       - name: Commit changes

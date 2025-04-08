@@ -1,0 +1,25 @@
+title: 채용 공고 모음
+description: 주요 IT 기업의 채용 정보를 한눈에 확인하세요
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  job_postings:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "job_postings"
+    values:
+      layout: "post" 
